@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        function nameCheck(){
+            // x=Number(document.getElementById("t1").value);
+            // z=1;
+            // for(i=2;i<x;i++){
+            // if(x%i==0)
+            // z=0;
+            // }
+            // if(z!=0)
+            // alert("Prime");
+            // else
+            // alert("Not Prime");
+            x=document.getElementById("t1").value;
+            var y=x;
+            p=/^[a-zA-Z]+ [a-zA-Z]+$/;
+            if(y==""){
+                alert("Please enter a name !!!");
+            }else
+            if(!p.test(y)){
+                alert("Invalid Name !!!");
+                document.getElementById("t1").value="";
+                document.getElementById("t1").focus();
+            }else
+            return true;
+        }
+        function check()
+        {
+            nameCheck();
+        }
+        function contactCheck(){
+            z=document.getElementById("t2").value;
+
+        }
+    </script>
+</head>
+<body  background-colour="yellow"> 
+
+        <h1 align="center">Registration Form</h1>
+        <table align="center">
+            <tr>
+                <td>Name : </td>
+                <td><input id="t1"></td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input id="t2"></td>
+            </tr>
+            <tr>
+                <td>Contact Number : </td>
+                <td><input id="t3"></td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td><input id="t4"></td>
+            </tr>
+            <tr>
+                <td>username : </td>
+                <td><input id="t4"></td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td><input id="t4"></td>
+            </tr>
+            <tr>
+                <td>Retype Password : </td>
+                <td><input id="t4"></td>
+            </tr>
+            <tr>
+                <td><button onclick="check()">Submit</button></td>
+            </tr>
+        </table>
+  
+</body>
+</html>
